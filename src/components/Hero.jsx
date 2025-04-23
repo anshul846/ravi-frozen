@@ -5,53 +5,48 @@ import React from "react";
 const Hero = () => {
   return (
     <>
-      <section className=" max-w-[1303px] w-full ml-auto pl-2 ">
-        <div className=" md:py-[76px] sm:py-[65px] py-[50px] flex max-md:flex-col justify-between  ">
+      <section className="  w-full mt-2 mb-5 sm:mb-7 md:mb-11 lg:mb-[61px] sm:mt-8  md:mt-[50px] lg:mt-[76px] ">
+        <div className="@container max-w-[1320px] w-full ml-auto relative ">
           <div>
-            <p className=" lg:text-[68px] md:text-[55px] sm:text-[45px] text-[30px]  font-semibold text-white leading-[110%] ">
-              <span className="italic">Cold Chain Service now </span>just a
-              Click away
-            </p>
-            <p className=" pt-5 text-white md:text-xl sm:text-lg font-medium max-w-[499px] w-full sm:pb-10 pb-6 ">
-              We provide a Plug'n'Play model for temperature-sensitive products,
-              empowering our customers with the essential tools to expand their
-              business while we ensure the preservation and transportation of
-              perishable goods.
-            </p>
-            <div className=" flex max-sm:flex-col max-sm:items-center gap-3.5 ">
-              <Link href="#">
-                <button
-                  type="submit"
-                  className=" bg-white rounded-full px-7.5 py-3.5 text-[#29E0FF] font-bold leading-[120%] cursor-pointer hover:scale-105 duration-300 hover:shadow-lg "
-                >
-                  Get Started
-                </button>
-              </Link>
-              <Link href="#">
-                <button
-                  type="submit"
-                  className=" bg-transparent border border-white rounded-full px-8 py-3.5 text-white font-bold leading-[120%] cursor-pointer hover:scale-105 duration-300 hover:shadow-lg hover:bg-white hover:text-[#29E0FF] "
-                >
+            <h1 className="max-w-[873px] w-full text-white  font-semibold leading-[110%] text-3xl sm:text-5xl  md:text-[60px] lg:text-[75px] sm:px-4 px-3  ">
+              <i> Cold Chain Service</i> now just a Click away
+            </h1>
+          </div>
+          <div className="  @max-5xl:flex-col flex justify-between mt-3 sm:mt-5 gap-4">
+            <div className=" sm:px-4 px-3 ">
+              <p className="max-w-full lg:max-w-[535px] w-full leading-[150%]  text-white font-medium text-xs sm:text-lg md:text-xl">
+                We provide a Plug'n'Play model for temperature-sensitive
+                products, empowering our customers with the essential tools to
+                expand their business while we ensure the preservation and
+                transportation of perishable goods.
+              </p>
+
+              <div className="flex items-center mt-5 sm:mt-10 gap-[14px]">
+                <Link href="#">
+                  <div className="bg-white rounded-full cursor-pointer hover:scale-105 duration-300 hover:shadow-lg ">
+                    <button
+                      type="submit"
+                      className="bg-gradient-to-r from-[#29E0FF] to-[#1FB0FF]  bg-clip-text group-hover:text-white! rounded-full px-6.5 py-3.5 text-transparent font-bold leading-[120%] max-sm:hidden"
+                    >
+                      Get Started
+                    </button>
+                  </div>
+                </Link>
+                <button className="w-[100px] sm:w-[120px] md:w-[150px]  bg-transparent border border-white rounded-[100px] font-medium text-white h-8 sm:h-9 md:h-12  text-sm sm:text-base leading-[120%] cursor-pointer hover:bg-white hover:text-[#21B7FF] hover:shadow-md hover:scale-101 transition duration-300 ease-in-out ">
                   Learn More
                 </button>
-              </Link>
+              </div>
             </div>
-          </div>
-          <div className=" max-w-[520px] w-full md:h-[323px] h-[180px] md:mt-[130px] mt-5  ">
-            <Image
-              className=" hidden md:flex "
-              src="/assets/image/png/hero-truck-img.png"
-              width={826}
-              height={443}
-              alt="hero-truck-img.png"
-            />
-            <Image
-              className=" md:hidden flex "
-              src="/assets/image/png/hero-truck-full-img.png"
-              width={826}
-              height={443}
-              alt="hero-truck-img.png"
-            />
+
+            <div className="flex justify-end shrink-0!">
+              <Image
+                className=" w-[350px] sm:w-[550px] lg:w-[600px] xl:w-[712px]! h-[200px] sm:h-[300px] md:h-[380px] lg:h-[400px] xl:h-[443px]  duration-300 ease-in-out absolute top-"
+                src="/assets/image/png/hero-truck-img.png"
+                width={712}
+                height={443}
+                alt="hero truck.png"
+              />
+            </div>
           </div>
         </div>
       </section>

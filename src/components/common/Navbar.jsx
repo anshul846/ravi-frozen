@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import Hero from "../Hero";
 import { useState } from "react";
 
 const Navbar = () => {
@@ -9,8 +8,8 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-[url(/assets/image/png/hero-bg.png)] bg-center bg-cover bg-no-repeat py-3 relative ">
-        <div className="max-w-[1140px] w-full mx-auto px-4 py-3">
+      <header className=" relative ">
+        <nav className="max-w-[1172px] w-full mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
             <Link href="#">
               <Image
@@ -18,6 +17,7 @@ const Navbar = () => {
                 width={176}
                 height={74}
                 alt="nav-logo.png"
+                unoptimized
               />
             </Link>
 
@@ -39,7 +39,7 @@ const Navbar = () => {
                 href="#"
                 className="text-white text-lg capitalize font-medium leading-[120%] duration-300 hover:scale-105 "
               >
-                WHY US
+                Why Us
               </Link>
               <Link
                 href="#"
@@ -51,12 +51,14 @@ const Navbar = () => {
             </div>
 
             <Link href="#">
-              <button
-                type="submit"
-                className="bg-white rounded-full px-6.5 py-3.5 text-[#29E0FF] font-bold leading-[120%] cursor-pointer hover:scale-105 duration-300 hover:shadow-lg max-sm:hidden"
-              >
-                Customer Login
-              </button>
+              <div className="bg-white rounded-full cursor-pointer hover:scale-105 duration-300 hover:shadow-lg ">
+                <button
+                  type="submit"
+                  className="bg-gradient-to-r from-[#29E0FF] to-[#1FB0FF]  bg-clip-text group-hover:text-white! rounded-full px-6.5 py-3.5 text-transparent font-bold leading-[120%] max-sm:hidden"
+                >
+                  Customer Login
+                </button>
+              </div>
             </Link>
             <div
               onClick={() => setOpen(true)}
@@ -67,9 +69,7 @@ const Navbar = () => {
               <p className="mt-1 bg-white h-[4px] rounded-[50px] w-[30px]"></p>
             </div>
           </div>
-        </div>
-
-        <Hero />
+        </nav>
 
         {/* Sidebar */}
         <section>
@@ -89,7 +89,7 @@ const Navbar = () => {
               </Link>
               <button
                 onClick={() => setOpen(false)}
-                className="text-black text-2xl font-bold"
+                className="text-white text-2xl font-bold"
               >
                 ✕
               </button>
@@ -129,7 +129,7 @@ const Navbar = () => {
             </button>
           </div>
         </section>
-      </nav>
+      </header>
     </>
   );
 };
